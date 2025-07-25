@@ -314,30 +314,5 @@ sudo htpasswd -c /mnt/usbdrive/nginx/.htpasswd ariauser
 ```
 
 
----
 
-## 🔐 HTTPS (TLS) with Self-Signed Certificate
-
-This project supports serving AriaNg + RPC securely over HTTPS using a self-signed certificate.
-
-### 🛠 Steps:
-
-1. Generate certificate:
-```bash
-sudo bash /mnt/usbdrive/scripts/generate-selfsigned-cert.sh
-```
-
-2. Set up Nginx with HTTPS:
-```bash
-sudo bash /mnt/usbdrive/scripts/nginx-aria2-proxy.sh
-```
-
-3. Access UI securely:
-```
-https://<tailscale-ip>:88/ariang/
-```
-
-### ⚠️ Note:
-- Your browser will show a warning for self-signed cert — this is normal. Proceed to continue.
-- You can add the cert as trusted manually in your OS if preferred.
 
