@@ -66,19 +66,7 @@ rpi-nas-box-bootstrap/
 
 ---
 
-## 📁 3. Download & Extract Project
-
-```bash
-cd ~
-wget <your-zip-url>
-unzip rpi-nas-box-bootstrap.zip
-cd rpi-nas-box-bootstrap
-chmod +x scripts/*.sh plugins/*.sh
-```
-
----
-
-## 🔐 4. Configure VPN Credentials
+## 🔐 3. Configure VPN Credentials
 
 Edit `scripts/rotate-windscribe.sh`:
 
@@ -98,7 +86,7 @@ With your **actual Windscribe credentials**.
 
 ---
 
-## 🚀 5. Run Setup Script
+## 🚀 4. Run Setup Script
 
 ```bash
 sudo ./scripts/setup-nas-box.sh
@@ -116,7 +104,7 @@ This installs:
 
 ---
 
-## 🌐 6. Connect to VPN and Tailscale
+## 🌐 5. Connect to VPN and Tailscale
 
 ```bash
 windscribe login
@@ -128,7 +116,7 @@ Tailscale gives you a remote-accessible IP like `100.x.x.x`
 
 ---
 
-## 🌍 7. Access Services
+## 🌍 6. Access Services
 
 | Tool         | Address                           |
 |--------------|------------------------------------|
@@ -140,7 +128,7 @@ Tailscale gives you a remote-accessible IP like `100.x.x.x`
 
 ---
 
-## 🔗 8. Add FileBrowser Download Plugin
+## 🔗 7. Add FileBrowser Download Plugin
 
 In FileBrowser Web UI:
 
@@ -155,7 +143,7 @@ To use:
 
 ---
 
-## 🧠 9. Automate VPN Fallback
+## 🧠 8. Automate VPN Fallback
 
 This script auto-detects if Windscribe quota is exceeded and logs in with the next account.
 
@@ -256,16 +244,6 @@ Aria2 is monitored every 5 minutes to ensure:
 - Status is logged
 
 **Log File:** `/mnt/usbdrive/status/aria2-status.log`
-
-### 🛠 Add to Cron:
-
-```bash
-crontab -e
-*/5 * * * * /mnt/usbdrive/scripts/aria2-watchdog.sh
-```
-
-This ensures your direct link downloads **always recover** even after unexpected failures.
-
 
 ---
 
