@@ -1,5 +1,4 @@
-# 🍓 Raspberry Pi NAS + Downloader Box (Bootstrap Project)
-
+# 🍓 Raspberry Pi NAS 
 This project turns your Raspberry Pi and USB pen drive into a powerful, VPN-protected NAS & downloader with remote access, file management, and smart VPN fallback.
 
 ---
